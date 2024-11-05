@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class ByCapitalPageComponent {
+  public searchByCapital(searchTerm: string) {
 
+  }
 }
