@@ -2,9 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 import { Observable, of } from "rxjs";
-import { catchError } from "rxjs/operators";
-
-import { map, delay } from "rxjs/operators";
+import { catchError, map, delay } from "rxjs/operators";
 
 import type { Country } from "../interfaces/country.interface";
 
@@ -18,7 +16,8 @@ export class CountriesService {
     return this.http.get<Country[]>(url)
     .pipe(
         catchError(() => of([])),
-        delay(2000)
+        // Delay por motivos didacticos
+        // delay(2000)
       );
   }
 

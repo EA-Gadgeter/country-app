@@ -3,5 +3,5 @@
   [placeholder]="placeholder"
   class="form-control"
   #txtInput
-  (keyup.enter)="EmitValue()"
+  (keyup)="OnKeyPress(txtInput.value)"
 >
